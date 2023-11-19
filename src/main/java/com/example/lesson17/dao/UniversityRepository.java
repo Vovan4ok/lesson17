@@ -10,12 +10,12 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 import java.util.stream.Stream;
 
-@Repository
+@Repository("universityRepository")
 public interface UniversityRepository extends JpaRepository<University, Long>, CrudRepository<University, Long> {
     List<University> findByName(String name);
 
-    List<University> findByAcreditationLevel(Short acreditatinoLevel);
+    List<University> findByAccreditationLevel(Short accreditationLevel);
 
-    @Query("select e from University e where e.name = :name")
+    @Query("select e from university e where e.name = :name")
     Stream<University> findByNameReturnsStream(@Param("name") String name);
 }

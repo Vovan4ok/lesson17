@@ -20,7 +20,7 @@ public interface UniversityService {
 
     List<University> findByName(String name);
 
-    List<University> findByAcreditationLevel(Short acreditatinoLevel);
+    List<University> findByAccreditationLevel(Short accreditationLevel);
 
     Stream<University> findByNameReturnsStream(String name);
 }

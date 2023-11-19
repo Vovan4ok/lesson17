@@ -46,8 +46,8 @@ public class UniversityServiceImpl implements UniversityService {
     }
 
     @Override
-    public List<University> findByAcreditationLevel(Short acreditatinoLevel) {
-        return universityRepository.findByAcreditationLevel(acreditatinoLevel);
+    public List<University> findByAccreditationLevel(Short accreditationLevel) {
+        return universityRepository.findByAccreditationLevel(accreditationLevel);
     }
 
     @Override

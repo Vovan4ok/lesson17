@@ -3,6 +3,7 @@ package com.example.lesson17.domain;
 import javax.persistence.*;
 
 @Entity
+@Table(name="university")
 public class University {
 
     @Id
@@ -13,7 +14,7 @@ public class University {
     private String name;
 
     @Column
-    private Short acreditationLevel;
+    private Short accreditationLevel;
 
     @Column
     private Integer numberOfInstitutes;
@@ -22,14 +23,14 @@ public class University {
     private Integer numberOfStudents;
 
     @Column
-    private String adress;
+    private String address;
 
-    public University(String name, short acreditationLevel, int numberOfInstitutes, int numberOfStudents, String adress) {
+    public University(String name, short accreditationLevel, int numberOfInstitutes, int numberOfStudents, String address) {
         this.name = name;
-        this.acreditationLevel = acreditationLevel;
+        this.accreditationLevel = accreditationLevel;
         this.numberOfInstitutes = numberOfInstitutes;
         this.numberOfStudents = numberOfStudents;
-        this.adress = adress;
+        this.address = address;
     }
 
     public University() {
@@ -44,12 +45,12 @@ public class University {
         this.name = name;
     }
 
-    public short getAcreditationLevel() {
-        return acreditationLevel;
+    public short getAccreditationLevel() {
+        return accreditationLevel;
     }
 
-    public void setAcreditationLevel(short acreditationLevel) {
-        this.acreditationLevel = acreditationLevel;
+    public void setAccreditationLevel(short accreditationLevel) {
+        this.accreditationLevel = accreditationLevel;
     }
 
     public int getNumberOfInstitutes() {
@@ -68,22 +69,22 @@ public class University {
         this.numberOfStudents = numberOfStudents;
     }
 
-    public String getAdress() {
-        return adress;
+    public String getAddress() {
+        return address;
     }
 
-    public void setAdress(String adress) {
-        this.adress = adress;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     @Override
     public String toString() {
         return "University{" +
                 "name='" + name + '\'' +
-                ", acreditationLevel=" + acreditationLevel +
+                ", accreditationLevel=" + accreditationLevel +
                 ", numberOfInstitutes=" + numberOfInstitutes +
                 ", numberOfStudents=" + numberOfStudents +
-                ", adress='" + adress + '\'' +
+                ", address='" + address + '\'' +
                 '}';
     }
 }
