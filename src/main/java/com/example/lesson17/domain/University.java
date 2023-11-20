@@ -1,6 +1,6 @@
 package com.example.lesson17.domain;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name="university")
@@ -35,6 +35,15 @@ public class University {
 
     public University() {
 
+    }
+
+    public University(Long id, String name, Short accreditationLevel, Integer numberOfInstitutes, Integer numberOfStudents, String address) {
+        this.id = id;
+        this.name = name;
+        this.accreditationLevel = accreditationLevel;
+        this.numberOfInstitutes = numberOfInstitutes;
+        this.numberOfStudents = numberOfStudents;
+        this.address = address;
     }
 
     public String getName() {

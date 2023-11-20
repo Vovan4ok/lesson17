@@ -1,11 +1,8 @@
 package com.example.lesson17.service;
 
 import com.example.lesson17.domain.University;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
 
 import java.util.List;
-import java.util.stream.Stream;
 
 public interface UniversityService {
     University save(University university);
@@ -22,5 +19,4 @@ public interface UniversityService {
 
     List<University> findByAccreditationLevel(Short accreditationLevel);
 
-    Stream<University> findByNameReturnsStream(String name);
 }
